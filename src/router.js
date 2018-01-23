@@ -5,16 +5,20 @@ import Home from './views/Home';
 
 // 懒加载
 const E = () =>
-  import(/* webpackChunkName: "group-ele" */ './views/element/Element.vue');
+  import ( /* webpackChunkName: "group-ele" */ './views/element/Element.vue');
 const V = () =>
-  import(/* webpackChunkName: "group-vue" */ './views/vue/Vue.vue');
+  import ( /* webpackChunkName: "group-vue" */ './views/vue/Vue.vue');
+const Vuex = () =>
+  import ( /* webpackChunkName: "group-vue" */ './views/vue/Vuex.vue');
+const Note = () =>
+  import ( /* webpackChunkName: "group-vue" */ './views/vue/Note.vue');
+
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       component: Home
     },
@@ -22,14 +26,21 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home,
-      children: [
-        {
+      children: [{
           path: 'ele',
           component: E
         },
         {
           path: 'vue',
           component: V
+        },
+        {
+          path: 'vuex',
+          component: Vuex
+        },
+        {
+          path: 'note',
+          component: Note
         }
       ]
     }

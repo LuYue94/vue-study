@@ -55,3 +55,30 @@ table { border-collapse: collapse; border-spacing: 0; }
 .clear {
   *zoom: 1;
 }
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 1px solid #f2f2f2;
+  background: #fafafa;
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #ABAAAA;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #ABAAAA;
+}

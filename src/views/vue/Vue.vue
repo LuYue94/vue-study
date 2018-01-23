@@ -1,5 +1,5 @@
 <template>
-  <div id="vue-wrap">
+  <div>
     <div class="group">
       <h1>计算属性 Computed</h1>
       <p>original：{{ message }}</p>
@@ -37,6 +37,12 @@
     <div class="group">
       <h1>Directive</h1>
       <directive-com></directive-com>
+    </div>
+    <div class="group">
+      <h1>Filter</h1>
+      'test' | capitalize : {{ 'test' | capitalize }}
+      <br> message | filterA('arg1', arg2)
+      <br> message | filterA | filterB
     </div>
   </div>
 </template>
@@ -101,12 +107,12 @@
 </script>
 
 <style lang="scss" scope>
-  #vue-wrap {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
+  // #vue-wrap {
+  //   box-sizing: border-box;
+  //   width: 100%;
+  //   height: 100%;
+  //   padding: 20px;
+  // }
   h1 {
     color: #42b983;
   }

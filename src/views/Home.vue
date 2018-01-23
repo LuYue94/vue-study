@@ -3,6 +3,8 @@
     <aside>
       <router-link to="/home/ele">Element</router-link>
       <router-link to="/home/vue">Vue</router-link>
+      <router-link to="/home/note">Note</router-link>
+      <router-link to="/home/vuex">Vuex</router-link>
     </aside>
 
     <section>
@@ -21,6 +23,16 @@
 </script>
 
 <style lang="scss" scope>
+  // router-link
+  .aside {
+    a:hover {
+      background: #e8f8ff;
+    }
+  }
+  .router-link-active {
+    background: darken(#e8f8ff, 10%);
+  }
+
   // transition
   .fade-enter-active,
   .fade-leave-active {
@@ -83,6 +95,7 @@
       width: 100%;
       display: block;
       line-height: 2;
+      color: #409eff;
     }
   }
   section {
@@ -94,5 +107,11 @@
     padding-left: $aside_width;
     box-sizing: border-box;
     overflow-y: auto;
+  }
+  section>div{
+        box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
   }
 </style>
