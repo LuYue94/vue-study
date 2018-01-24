@@ -31,3 +31,44 @@
 }
 
 
+button[disabled="disabled"] {
+  cursor: not-allowed!important;
+  opacity: 0.65;
+}
+
+button {
+  display: inline-block;
+  padding: 7px 21px;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 4px;
+  text-align: center;
+  color: #FFF;
+  background: #3fccb4;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+      color: #FFF;
+      background: #1abc9c;
+  }
+}
+
+// .space_button {
+//   display: inline-block;
+//   padding: 7px 21px;
+//   font-size: 14px;
+//   line-height: 1;
+//   border-radius: 4px;
+//   text-align: center;
+//   color: #3fccb4;
+//   border: 1px solid #3fccb4;
+//   background: #fff;
+//   cursor: pointer;
+//   text-decoration: none;
+//   &:hover {
+//       color: #1abc9c;
+//       border: 1px solid #1abc9c;
+//       text-decoration: none;
+//   }
+// }

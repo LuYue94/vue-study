@@ -5,6 +5,7 @@
       <router-link to="/home/vue">Vue</router-link>
       <router-link to="/home/note">Note</router-link>
       <router-link to="/home/vuex">Vuex</router-link>
+      <router-link to="/home/vrouter">vue-router</router-link>
     </aside>
 
     <section>
@@ -108,10 +109,29 @@
     box-sizing: border-box;
     overflow-y: auto;
   }
-  section>div{
-        box-sizing: border-box;
+  section > div {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
     padding: 20px;
+  }
+  h1 {
+    color: #42b983;
+  }
+  .group {
+    margin: 10px 0;
+    padding: 10px;
+    clear: both;
+    border-bottom: 1px solid #42b983;
+  }
+  /* 清除浮动 */
+  .group:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  .group {
+    *zoom: 1;
   }
 </style>

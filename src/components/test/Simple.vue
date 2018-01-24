@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
   .btn {
     float: left;
-    width: 20px;
+    // width: 20px;
     margin-right: 10px;
   }
 </style>

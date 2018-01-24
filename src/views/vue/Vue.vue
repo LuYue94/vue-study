@@ -113,25 +113,7 @@
   //   height: 100%;
   //   padding: 20px;
   // }
-  h1 {
-    color: #42b983;
-  }
-  .group {
-    margin: 10px 0;
-    padding: 10px;
-    clear: both;
-    border-bottom: 1px solid #42b983;
-  }
-  /* 清除浮动 */
-  .group:after {
-    content: '\20';
-    display: block;
-    height: 0;
-    clear: both;
-  }
-  .group {
-    *zoom: 1;
-  }
+
 </style>
 
 

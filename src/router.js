@@ -12,6 +12,8 @@ const Vuex = () =>
   import ( /* webpackChunkName: "group-vue" */ './views/vue/Vuex.vue');
 const Note = () =>
   import ( /* webpackChunkName: "group-vue" */ './views/vue/Note.vue');
+const VRouter = () =>
+  import ( /* webpackChunkName: "group-vue" */ './views/vue/VRouter.vue');
 
 
 Vue.use(Router);
@@ -41,7 +43,11 @@ export default new Router({
         {
           path: 'note',
           component: Note
-        }
+        },
+        {
+          path: 'vrouter',
+          component: VRouter
+        },
       ]
     }
   ]
