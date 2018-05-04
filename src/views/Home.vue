@@ -1,15 +1,17 @@
 <template>
   <div class="container">
     <aside>
+      
+      <router-link to="/home/es6">ES6</router-link>
       <router-link to="/home/ele">Element</router-link>
       <router-link to="/home/vue">Vue</router-link>
       <router-link to="/home/note">Note</router-link>
       <router-link to="/home/vuex">Vuex</router-link>
-      <router-link to="/home/vrouter">vue-router</router-link>
+      <router-link to="/home/vrouter">Vue Router</router-link>
     </aside>
 
     <section>
-      <transition name="bounce">
+      <transition name="">
         <router-view/>
       </transition>
     </section>
@@ -19,7 +21,7 @@
 
 <script>
   export default {
-    name: 'home'
+    name: "home"
   };
 </script>
 
@@ -126,7 +128,7 @@
   }
   /* 清除浮动 */
   .group:after {
-    content: '\20';
+    content: "\20";
     display: block;
     height: 0;
     clear: both;

@@ -11,8 +11,8 @@
 </script>
 
 <style lang="scss">
-  @import './style/reset.scss';
-  @import './style/common.scss';
+  @import 'src/style/reset.scss';
+  @import 'src/style/common.scss';
 
   [v-cloak] {
     display: none;

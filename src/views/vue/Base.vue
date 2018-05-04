@@ -55,17 +55,17 @@
     CheckList,
     SelectBox,
     DirectiveCom
-  } from '../../components/test';
+  } from "../../components/test";
 
   export default {
-    name: 'Vue',
+    name: "Vue",
 
     data() {
       return {
         vueWrap: null,
-        message: 'Hello Word!',
-        firstName: 'Lu',
-        lastName: 'Yue'
+        message: "Hello Word!",
+        firstName: "Lu",
+        lastName: "Yue"
       };
     },
 
@@ -74,13 +74,13 @@
     computed: {
       reversedMessage: function() {
         return this.message
-          .split('')
+          .split("")
           .reverse()
-          .join('');
+          .join("");
       },
       fullName: {
         get: function() {
-          return this.firstName + ' ' + this.lastName;
+          return this.firstName + " " + this.lastName;
         },
         set: function(newValue) {
           console.log(newValue);
@@ -94,13 +94,13 @@
     },
 
     mounted() {
-      this.vueWrap = document.getElementById('vue-wrap');
+      this.vueWrap = document.getElementById("vue-wrap");
       // console.log(this.customFunction);
     },
 
     methods: {
       customFunction() {
-        console.log('custom');
+        console.log("custom");
       }
     }
   };
@@ -113,7 +113,6 @@
   //   height: 100%;
   //   padding: 20px;
   // }
-
 </style>
 
 

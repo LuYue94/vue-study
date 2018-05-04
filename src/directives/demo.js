@@ -2,7 +2,6 @@ import Vue from 'vue';
 
 Vue.directive('demo', {
   bind: function(el, binding, vnode) {
-    console.log('bind');
     var s = JSON.stringify;
     el.innerHTML =
       'name: ' +

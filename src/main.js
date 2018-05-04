@@ -11,6 +11,15 @@ import './filters/capitalize';
 
 Vue.config.productionTip = false;
 
+
+
+router.beforeEach((to, from, next) => {
+  console.log("%c from",'color:red',from.fullPath)
+  console.log("%c to","color:red",to.fullPath)
+
+  next()
+})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
