@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <p>Const声明常亮</p>
+      <p>Const声明常量</p>
       <img src="../../assets/es6/const.jpg" alt="">
       <p>Let声明变量</p>
       <img src="../../assets/es6/let.jpg" alt="">
