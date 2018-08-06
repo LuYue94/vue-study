@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <aside>
-      
+      <a href="/">返回首页</a>
       <router-link to="/home/es6">ES6</router-link>
       <router-link to="/home/ele">Element</router-link>
       <router-link to="/home/vue">Vue</router-link>

@@ -27,7 +27,7 @@
 
 <script>
   export default {
-    name: "ES6_content"
+    name: "content"
   };
 </script>
 

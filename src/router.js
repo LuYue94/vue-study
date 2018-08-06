@@ -6,12 +6,24 @@ import Home from './views/Home';
 // 懒加载
 
 const NotFound = () => import('./views/404.vue');
-const ES6_content = () =>
+const Content = () =>
     import( /* webpackChunkName: "group-ES6" */ './views/ES6/Content.vue');
-const ES6_overview = () =>
+const overview = () =>
     import( /* webpackChunkName: "group-ES6" */ './views/ES6/overview.vue');
-const ES6_code = () =>
+const code = () =>
     import( /* webpackChunkName: "group-ES6" */ './views/ES6/code.vue');
+const promise = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/promise.vue');
+const iterator = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/iterator.vue');
+const generator = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/generator.vue');
+const async = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/async.vue');
+const es6class = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/es6class.vue');
+const module = () =>
+    import( /* webpackChunkName: "group-ES6" */ './views/ES6/module.vue');
 
 const E = () =>
     import( /* webpackChunkName: "group-ele" */ './views/element/Element.vue');
@@ -33,31 +45,71 @@ const VRouter = () =>
 
 Vue.use(Router);
 
+function getAbsoultePath() {
+    let path = location.pathname
+    return path.substring(0, path.lastIndexOf('/') + 1)
+}
+
 export default new Router({
     mode: 'history',
+    // base: '/',
     routes: [{
         path: '/',
         //   component: Home,
-        redirect: '/home/es6'
+        redirect: '/home/es6/overview'
     },
+    // {
+    //     path: '/vue.html',
+    //     //   component: Home,
+    //     redirect: '/home/es6/overview'
+    // },
     {
         path: '/home',
         name: 'Home',
         component: Home,
         children: [{
             path: 'es6',
-            component: ES6_content,
+            component: Content,
             children: [{
                 path: '',
-                component: ES6_overview
+                redirect: 'overview'
+                // component: overview
             },
             {
-                path: 'es6overview',
-                component: ES6_overview
+                path: 'overview',
+                component: overview
             },
             {
-                path: 'es6code',
-                component: ES6_code
+                path: 'code',
+                component: code
+            },
+            {
+                path: 'promise',
+                component: promise
+            }
+                ,
+            {
+                path: 'iterator',
+                component: iterator
+            }
+                ,
+            {
+                path: 'generator',
+                component: generator
+            },
+            {
+                path: 'async',
+                component: async
+            }
+                ,
+            {
+                path: 'class',
+                component: es6class
+            }
+                ,
+            {
+                path: 'module',
+                component: module
             }
             ]
         }, {
@@ -92,6 +144,6 @@ export default new Router({
         },
         ]
     },
-    { path: '*', component: NotFound },//全不匹配的情况下，返回404，路由按顺序从上到下，依次匹配。最后一个*能匹配全部，
+    { path: '*', redirect: '/home/es6/overview' },//全不匹配的情况下，返回404，路由按顺序从上到下，依次匹配。最后一个*能匹配全部，
     ]
 });
