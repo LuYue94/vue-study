@@ -1,0 +1,2 @@
+webpackJsonp([4],{KstZ:function(e,t){},LWuV:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var e=this.$createElement,t=this._self._c||e;return t("div",[t("div")])}]};var s=n("vSla")({name:"vrouter"},r,!1,function(e){n("KstZ")},null,null);t.default=s.exports}});
+//# sourceMappingURL=4.96f2332e2249e091ee95.js.map
