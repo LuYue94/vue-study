@@ -44,6 +44,16 @@
       <br> message | filterA('arg1', arg2)
       <br> message | filterA | filterB
     </div>
+    <div class="group">
+      <h1>Slots/Provide/Inject</h1>
+      <slot-parent :reverse="reverseFlag">
+          <slot-child :index="1"/>
+          <slot-child :index="2"/>
+          <slot-child :index="3"/>
+          <slot-child :index="4"/>
+      </slot-parent>
+      <br><button @click="reverseFlag = !reverseFlag">reverse</button>
+    </div>
   </div>
 </template>
 
@@ -57,6 +67,9 @@
     DirectiveCom
   } from "../../components/test";
 
+import SlotParent from "../../components/slot/main.vue"
+import SlotChild from "../../components/slot/item.vue"
+
   export default {
     name: "Vue",
 
@@ -65,11 +78,12 @@
         vueWrap: null,
         message: "Hello Word!",
         firstName: "Lu",
-        lastName: "Yue"
+        lastName: "Yue",
+        reverseFlag:false
       };
     },
 
-    components: { Simple, Counter, TodoList, CheckList, SelectBox, DirectiveCom },
+    components: { Simple, Counter, TodoList, CheckList, SelectBox, DirectiveCom ,SlotParent,SlotChild},
 
     computed: {
       reversedMessage: function() {
